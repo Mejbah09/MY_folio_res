@@ -1,0 +1,343 @@
+/*
+Template Name: 
+Author: 
+Version: 1.0.0
+Author URL:
+UI Designer:
+Description:
+
+Table Of ::content
+=======================
+1. Nav part .
+2. Banner part .
+3. About part .
+4. Service part .
+5. My Work part .
+6. Contact part .
+7. Footer part .
+*/
+
+/* Common Css Start */
+:root {
+  --main_color: #02918b;
+  --secondary_color: #cfc91d;
+  --text_white: #fff;
+  --text_gray: #7e8287;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+span,
+small,
+button {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style-type: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+  display: inline-block;
+}
+ol,
+ul {
+  list-style-type: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+  display: inline-block;
+}
+h4 {
+  text-transform: uppercase;
+}
+
+body h2 {
+  font-size: 46px;
+  color: var(--main_color);
+  font-weight: 800;
+}
+
+body h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text_gray);
+}
+body i{
+  color: var(--main_color);
+  font-weight: 800;
+  font-size: 25px;
+}
+body p{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text_gray);
+  display:inline-block;
+}
+body img{
+  display: block;
+}
+/* common css end  */
+/* nav part css start  */
+#nav{
+  background: var(--main_color);
+
+}
+#nav ul li a{
+  display: inline-block;
+  padding: 26px 25px;
+  color:var(--text_white);
+  font-size: 12px;
+  font-weight: 800;
+  transition: 0.7s;
+}
+/* [ using hover for menu transion ]  */
+#nav ul li a:hover{
+  color: var(--secondary_color);
+  background-color: var(--text_white);
+  border-radius: 35px;
+
+}
+/* nav part css end  */
+#banner{
+  background-image: url(../image/bannerphoto2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 727px; 
+  color:var(--text_white);
+  position: relative;
+  z-index: 1
+}
+#banner::after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  background-color: black;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+#banner h3{
+  font-size: 30px;
+  font-weight: 400;
+}
+#banner h1{
+  font-size: 68px;
+  font-weight: 800;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+#banner p{
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: none;
+}
+#banner img{
+  margin:  53px auto;
+}
+#banner a{
+  color: black;
+  background-color:var(--secondary_color);
+  padding: 20px 42px;
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-weight: 800;
+  transition: 0.7s;
+}
+/* using hover for know more  */
+#banner a:hover{
+  color: var(--secondary_color);
+  background-color: var(--main_color);
+  border-radius: 40px;
+}
+
+/* banner part end  */
+/* about part css start  */
+#about{
+  padding: 98px 0px;
+  
+}
+#about .info p{
+  display: inline-block;
+  padding: 33px 0px 0px 0px;
+}
+#about .about_item{
+  border-right: 1px solid #d9dbdb;
+  margin-top: 85px;
+  
+}
+#about .about_item h4{
+  
+  padding: 29px 0px;
+}
+#about .about_item p{
+  font-size: 11px;
+  color: #7e8287;
+  font-weight: 400;
+}
+#about b{
+  font-size: 23px;
+  font-weight: 800;
+}
+/* about part css end */
+/* about part css end */
+/* MY work css start  */
+
+
+#service{
+  background-image: url(../image/service.png);
+  background-position: center;
+  background-size: cover;
+  padding: 0px 0px 74px 0px ;
+}
+#service h4{
+  font-size: 16px;
+}
+#service h2{
+  padding: 74px 0px 47px 0px;
+  text-align: left;
+}
+#service p{
+  font-size: 16px;
+  padding: 0px 0px 31px 0px;
+}
+#service .row .service_item p{
+
+  font-size: 11px;
+  text-align: left;
+  padding: 0px 15px 0px 0px; 
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+#service .row .service_item i{
+  margin-top:20px ;
+  margin-bottom: 20px;
+}
+
+
+/* service part css end  */
+/* service part css end  */
+/* my work start  */
+#my_work .info{
+  padding: 109px 0 80px 0px;
+}
+#my_work .info p{
+  margin: auto;
+  padding: 10px 0px 10px 0px;
+  font-weight: 400;
+}
+.work_item{
+  
+  position: relative;
+} .work_item img{
+  width: 100%;
+  display: block;
+} .work_item .overlay{
+  position: absolute;
+  top: 20px;  
+  bottom: 20px;
+  left: 28px;
+  right: 28px;
+  background: rgba(2, 145, 139, 0.85);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.7s;
+}
+ .work_item:hover .overlay{
+  visibility: visible;
+  opacity: 1;
+  border-radius: 70px ;
+}
+
+ .work_item .overlay h5{
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text_white);
+  
+} .work_item .overlay p{
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--text_white);
+}
+/* MY work css End  */
+/* Cotact me start  */
+#contact{
+  padding: 102px 0px 73px 0px;
+}
+#contact .info p{
+  
+  
+  padding: 10px 0px 10px 0px;
+  font-weight: 400;
+}
+
+ #contact_form {
+  background: #0a0a0b;
+  padding: 75px 0px;
+ }
+
+ #contact_form input,#contact textarea{
+  display: block;
+  color: var(--text_gray);
+  text-align: center;
+  font-size: 16px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding:15px 20px;
+  background: none;
+  border: none;
+  border-top: 1px solid #7e8287;
+ }
+
+#contact_form  textarea{
+  font-family:  'Open Sans', sans-serif;
+  
+}
+#contact_form  button{
+  display: block;
+  margin: auto;
+  color: #0b1016;
+  background-color:var(--secondary_color);
+  padding: 19px 65px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.7s;
+  text-transform: uppercase;
+  border: none;
+  transition: 0.7s;
+}
+#contact_form  button:hover{
+  color:var(--secondary_color);
+  background-color:var(--main_color);
+  border-radius: 40px;
+} 
+
+/* contact form end  */
+
+
+/* contact me css end   */
+footer{
+  background-color: #000;
+  color:var(--text_gray);
+  font-size: 15px;
+  padding: 35px 0px 27px 0px;
+}
+/* CSS END  */
